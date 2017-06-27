@@ -1,0 +1,21 @@
+language: node_js
+node_js: 6
+
+# Enable container-based mode
+sudo: false
+
+# Switch distribution to Ubuntu 14.04
+dist: trusty
+
+addons:
+  # Install Google Chrome
+  # Ref1: https://docs.travis-ci.com/user/chrome
+  # Ref2: https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-the-Chrome-addon-in-the-headless-mode
+  # Ref3: https://iamakulov.com/notes/install-google-chrome-on-travis/
+  chrome: stable
+
+script:
+  # Install npm packages
+  - "npm install"
+  # Run TestCafe
+  - "./node_modules/.bin/testcafe 'path:`/usr/bin/google-chrome-stable` --headless --disable-gpu --remote-debugging-port=9222 --remote-debugging-address=0.0.0.0' test.js --skip-js-errors --assertion-timeout 30000"
