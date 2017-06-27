@@ -1,19 +1,10 @@
-# Basic TestCafe API example
+[![Build Status](https://travis-ci.org/ajhsu/testcafe-headless-chrome-travis.svg)](https://travis-ci.org/ajhsu/testcafe-headless-chrome-travis)
 
-*A set of sample tests that illustrate how to use TestCafe API*
+# Running TestCafe with headless Chrome on Travis CI
 
-## Running the example
+Demonstrate how to integrate TestCafe with headless Chrome on Travis CI.
 
-Clone the repository to your machine and install the dependencies:
+## LICENSE
+MIT
 
-```sh
-git clone https://github.com/DevExpress/testcafe.git
-cd examples/basic
-npm install
-```
-
-Then, run the `test` command:
-
-```sh
-npm test
-```
+This example project is forked from [DevExpress/testcafe](https://github.com/DevExpress/testcafe/tree/master/examples/basic).
